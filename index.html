@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Group Four: Safe & Inclusive Learning at ALU</title>
   <meta name="description" content="A creative, responsive group submission on fostering safe and inclusive learning environments at ALU through relationships, psychological safety, and democratic dialogue." />
-  <meta property="og:title" content="Safe & Inclusive Learning at ALU" />
+  <meta property="og:title" content="Group Four: Safe & Inclusive Learning at ALU" />
   <meta property="og:description" content="A creative web submission on relationships, safety, inclusion, and controversial issues in higher education." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
       --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;
       --color-bg:#f7f6f2;--color-surface:#f9f8f5;--color-surface-2:#eeece6;--color-surface-offset:#e8e5dd;--color-border:#d7d2c7;
       --color-text:#27241e;--color-text-muted:#6f6a61;--color-text-faint:#9c978d;--color-text-inverse:#fbfaf7;
-      --color-primary:#0d6b6d;--color-primary-hover:#0b5154;--color-accent:#a35b2a;--color-highlight:#d7e5e2;
+      --color-primary:#0d6b6d;--color-primary-hover:#0b5154;--color-accent:#a35b2a;--color-highlight:#d7e5e2;--color-soft-rose:#efe0d6;
       --shadow-sm:0 1px 2px rgba(28,24,16,.05);--shadow-md:0 8px 30px rgba(28,24,16,.08);--shadow-lg:0 24px 60px rgba(28,24,16,.13);
       --radius-sm:.5rem;--radius-md:.9rem;--radius-lg:1.4rem;--radius-xl:2rem;--radius-full:999px;
       --font-display:'Instrument Serif', Georgia, serif;--font-body:'Manrope', system-ui, sans-serif;
@@ -30,15 +30,16 @@
     [data-theme="dark"]{
       --color-bg:#171614;--color-surface:#1d1b18;--color-surface-2:#25221e;--color-surface-offset:#2e2a24;--color-border:#3b3731;
       --color-text:#ece7df;--color-text-muted:#b7b0a6;--color-text-faint:#877f75;--color-text-inverse:#1b1815;
-      --color-primary:#5ea7ad;--color-primary-hover:#7fb9be;--color-accent:#d39a6c;--color-highlight:#233635;
+      --color-primary:#5ea7ad;--color-primary-hover:#7fb9be;--color-accent:#d39a6c;--color-highlight:#233635;--color-soft-rose:#3a2b28;
       --shadow-sm:0 1px 2px rgba(0,0,0,.2);--shadow-md:0 8px 30px rgba(0,0,0,.35);--shadow-lg:0 24px 60px rgba(0,0,0,.5);
     }
-    *,:before,:after{box-sizing:border-box} html{scroll-behavior:smooth} body,h1,h2,h3,h4,p,figure,blockquote{margin:0}
+    *,:before,:after{box-sizing:border-box} html{scroll-behavior:smooth} body,h1,h2,h3,h4,p,figure,blockquote,table{margin:0}
     body{min-height:100vh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;background:
       radial-gradient(circle at top right, color-mix(in srgb, var(--color-primary) 12%, transparent), transparent 28%),
       radial-gradient(circle at left 20% top 18%, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 30%),
+      linear-gradient(180deg, transparent, color-mix(in srgb,var(--color-soft-rose) 18%, transparent)),
       var(--color-bg);color:var(--color-text)}
-    img,svg{display:block;max-width:100%} a{color:inherit;text-decoration:none} button{font:inherit;cursor:pointer}
+    img,svg{display:block;max-width:100%} a{color:inherit;text-decoration:none} button{font:inherit;cursor:pointer} table{border-collapse:collapse;width:100%}
     .skip-link{position:absolute;left:-9999px;top:auto}.skip-link:focus{left:1rem;top:1rem;z-index:1000;background:var(--color-primary);color:var(--color-text-inverse);padding:.75rem 1rem;border-radius:var(--radius-md)}
     .container{width:min(1180px,calc(100% - 2rem));margin-inline:auto}
     .site-header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--color-bg) 85%, transparent);backdrop-filter:blur(16px);border-bottom:1px solid color-mix(in srgb,var(--color-border) 70%, transparent)}
@@ -73,7 +74,7 @@
     .editorial-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:1.2rem}
     .panel{padding:1.35rem;border-radius:var(--radius-lg);background:color-mix(in srgb,var(--color-surface) 95%, transparent);border:1px solid color-mix(in srgb,var(--color-border) 85%, transparent);box-shadow:var(--shadow-sm)}
     .panel h3{font-size:var(--text-lg);line-height:1.15;margin-bottom:.7rem}
-    .panel p,.panel li{color:var(--color-text-muted)}
+    .panel p,.panel li,.panel td,.panel th{color:var(--color-text-muted)}
     .story-card{min-height:100%;display:flex;flex-direction:column;justify-content:space-between;gap:1rem}
     .story-tag{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--color-accent);font-weight:700}
     .quote{padding:1.4rem;border-left:4px solid var(--color-primary);background:color-mix(in srgb,var(--color-highlight) 45%, var(--color-surface));border-radius:0 var(--radius-lg) var(--radius-lg) 0}
@@ -86,12 +87,20 @@
     .step{padding:1rem;border-radius:1rem;background:var(--color-surface);border:1px solid var(--color-border);position:relative}
     .step .num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--color-primary);color:var(--color-text-inverse);font-size:var(--text-xs);font-weight:800;margin-bottom:.8rem}
     .highlight-band{padding:1.3rem;border-radius:var(--radius-xl);background:linear-gradient(135deg,color-mix(in srgb,var(--color-primary) 12%, var(--color-surface)),color-mix(in srgb,var(--color-accent) 8%, var(--color-surface-2)));border:1px solid color-mix(in srgb,var(--color-border) 85%, transparent)}
+    .visual-duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+    .visual-card{padding:1rem;border-radius:1.2rem;background:var(--color-surface);border:1px solid var(--color-border);min-height:220px;display:flex;flex-direction:column;justify-content:space-between}
+    .visual-caption{font-size:var(--text-sm);color:var(--color-text-muted);margin-top:.8rem}
+    .contrib-wrap{overflow:auto;border-radius:1.2rem;border:1px solid var(--color-border);background:var(--color-surface);box-shadow:var(--shadow-sm)}
+    .contrib-table th,.contrib-table td{padding:1rem;vertical-align:top;border-bottom:1px solid color-mix(in srgb,var(--color-border) 75%, transparent);text-align:left}
+    .contrib-table th{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--color-text);background:color-mix(in srgb,var(--color-highlight) 36%, var(--color-surface))}
+    .contrib-table tr:last-child td{border-bottom:none}
+    .name-pill{display:inline-flex;align-items:center;gap:.45rem;padding:.35rem .7rem;border-radius:999px;background:color-mix(in srgb,var(--color-highlight) 38%, transparent);color:var(--color-text);font-weight:700;font-size:var(--text-sm)}
     .footer{padding:2rem 0 3rem;color:var(--color-text-muted)}
     .footer-grid{display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap;padding-top:1rem;border-top:1px solid var(--color-border)}
     .badge-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}.badge{padding:.55rem .85rem;border-radius:999px;background:var(--color-surface);border:1px solid var(--color-border);font-size:var(--text-xs);font-weight:700;color:var(--color-text-muted)}
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}.reveal.show{opacity:1;transform:none}
     @media (max-width: 980px){
-      .hero-grid,.section-head,.editorial-grid,.cards-3,.process-timeline{grid-template-columns:1fr}
+      .hero-grid,.section-head,.editorial-grid,.cards-3,.process-timeline,.visual-duo{grid-template-columns:1fr}
       .nav{display:none}
       .stat-strip{grid-template-columns:1fr}
       .hero h1{max-width:14ch}
@@ -101,7 +110,8 @@
       .hero{padding-top:3rem}
       .hero-actions{flex-direction:column;align-items:stretch}
       .btn{width:100%}
-      .panel,.hero-card,.highlight-band{padding:1rem}
+      .panel,.hero-card,.highlight-band,.visual-card{padding:1rem}
+      .contrib-table th,.contrib-table td{padding:.8rem}
     }
   </style>
 </head>
@@ -122,7 +132,7 @@
         <a href="#relationships">Relationships</a>
         <a href="#inclusion">Inclusion</a>
         <a href="#intervention">Intervention</a>
-        <a href="#support">Support</a>
+        <a href="#contributions">Contributions</a>
       </nav>
       <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -139,7 +149,7 @@
           <p class="hero-lead">This submission brings together perspectives from BSE, BEL, and IBT to show how relationships, tone, psychological safety, and structured dialogue shape learning in real classrooms, projects, and studio spaces.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#relationships">Read the submission</a>
-            <a class="btn btn-secondary" href="#support">Institutional recommendations</a>
+            <a class="btn btn-secondary" href="#contributions">View team contributions</a>
           </div>
           <div class="badge-row" aria-label="Themes covered">
             <span class="badge">Student voice</span>
@@ -261,6 +271,29 @@
             <p>In ALU spaces, difficult questions appear in venture design, AI ethics, labour models, climate decisions, financing systems, gender inclusion, and governance debates. Avoiding them does not remove them; it only pushes students to make sense of them without structured inquiry, evidence, or facilitation.</p>
           </div>
         </div>
+        <div class="visual-duo reveal" aria-label="Decorative visual summary cards">
+          <div class="visual-card">
+            <svg viewBox="0 0 320 180" width="320" height="180" role="img" aria-label="Visual showing dialogue and inclusion">
+              <rect x="18" y="18" width="118" height="68" rx="18" fill="var(--color-highlight)"/>
+              <rect x="118" y="52" width="128" height="82" rx="22" fill="var(--color-surface-offset)" stroke="var(--color-border)"/>
+              <rect x="212" y="28" width="90" height="58" rx="18" fill="var(--color-soft-rose)"/>
+              <circle cx="72" cy="52" r="16" fill="none" stroke="var(--color-primary)" stroke-width="2.4"/>
+              <circle cx="180" cy="95" r="18" fill="none" stroke="var(--color-accent)" stroke-width="2.4"/>
+              <path d="M87 64c24 15 42 21 61 26" stroke="var(--color-text-muted)" stroke-width="2" stroke-dasharray="4 7"/>
+            </svg>
+            <p class="visual-caption">Safe spaces still make room for challenge, but the challenge is structured, respectful, and evidence-aware.</p>
+          </div>
+          <div class="visual-card">
+            <svg viewBox="0 0 320 180" width="320" height="180" role="img" aria-label="Visual showing shared institutional support">
+              <path d="M32 132c28-40 67-61 112-61 42 0 74 12 134 48" fill="none" stroke="var(--color-primary)" stroke-width="3"/>
+              <rect x="42" y="42" width="56" height="56" rx="18" fill="var(--color-surface-offset)" stroke="var(--color-border)"/>
+              <rect x="128" y="28" width="66" height="66" rx="22" fill="var(--color-highlight)"/>
+              <rect x="224" y="58" width="56" height="56" rx="18" fill="var(--color-soft-rose)"/>
+              <path d="M70 142h176" stroke="var(--color-text-faint)" stroke-width="2" stroke-dasharray="6 8"/>
+            </svg>
+            <p class="visual-caption">Supportive institutions make inclusive facilitation easier through policy, case banks, training, and student feedback loops.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -294,12 +327,55 @@
         </div>
       </div>
     </section>
+
+    <section class="section" id="contributions">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Individual contributions</h2>
+          <p>The table below can be submitted as part of the final website to clearly show how work was shared across the group. Elvira’s role explicitly includes designing the website, as requested.</p>
+        </div>
+        <div class="panel reveal">
+          <div class="contrib-wrap">
+            <table class="contrib-table" aria-label="Individual contribution table">
+              <thead>
+                <tr>
+                  <th>Team member</th>
+                  <th>Programme lens</th>
+                  <th>Main contribution</th>
+                  <th>Specific tasks completed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="name-pill">Elvira Khwatenge</span></td>
+                  <td>BSE</td>
+                  <td>Digital presentation and technical framing</td>
+                  <td>Designed the website; structured the web-based submission; contributed BSE examples and applied the technical perspective to safe, inclusive, and ethically grounded learning.</td>
+                </tr>
+                <tr>
+                  <td><span class="name-pill">Claudine Uwajeneza</span></td>
+                  <td>BEL</td>
+                  <td>Inclusive learning and student experience lens</td>
+                  <td>Contributed ideas on supportive classroom culture, learner participation, and practical examples of how norms and facilitation strategies can strengthen inclusion.</td>
+                </tr>
+                <tr>
+                  <td><span class="name-pill">Dominic Tufuor</span></td>
+                  <td>IBT</td>
+                  <td>Entrepreneurial and institutional application</td>
+                  <td>Contributed examples related to venture critique, professional dialogue, and institutional recommendations for preparing ethical, values-driven leaders.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container footer-grid">
-      <p>Submission by Elvira Khwatenge, Claudine Uwajeneza and Dominic Tufuor.</p>
-  
+      <p>Submission by Elvira Khwatenge, Claudine Uwajeneza, and Dominic Tufuor.</p>
+      <p>Responsive website prepared for GitHub Pages hosting.</p>
     </div>
   </footer>
 
